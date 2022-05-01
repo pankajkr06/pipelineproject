@@ -1,12 +1,3 @@
-variable "aws_region" {
-    description = "Describes the AWS Region"
-}
-
-variable "cidr" {
-    description = "Describes CIDR for VPC"
-  
-}
-
 variable "az" {
 
   type    = list(string)
