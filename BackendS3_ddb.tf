@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform_state" {
-    bucket = "pipelineproject"
+    bucket = "pipelineproject2"
     versioning {
       enabled = true
     }
