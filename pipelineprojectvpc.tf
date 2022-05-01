@@ -1,4 +1,4 @@
-module "pipelineprojectvpc" {
+module "pipelineproject_vpc" {
     source = "./Modules"
     cidr = "10.1.0.0/16"
     vpc_name = "pipelineproject2"
