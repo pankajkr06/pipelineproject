@@ -2,9 +2,8 @@ resource "aws_vpc" "awsvpc" {
     cidr_block = var.cidr
 
     tags = {
-        Name = "PipelineProject"
+        Name = aws.vpc_name
     }
-  
 }
 
 resource "aws_subnet" "vpc1_pub_subnet" {
@@ -12,7 +11,7 @@ resource "aws_subnet" "vpc1_pub_subnet" {
   count                   = length(var.az)
   availability_zone       = var.az[count.index]
   cidr_block              = var.pub_sub[count.index]
-  map_public_ip_on_launch = false
+  map_public_ip_on_launch = true
 
   tags = {
     "Name" = "PrivateSubnet-${count.index}"

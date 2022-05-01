@@ -30,7 +30,7 @@ phases:
       - cd "$CODEBUILD_SRC_DIR"
       - ls -lrt "$CODEBUILD_SRC_DIR"
       - terraform --version
-      - terraform init -input=false
+      - terraform init -input=false --backend-config=prod.conf
       - terraform validate
       - terraform plan -lock=false -input=false            
       - terraform $TF_COMMAND -input=false -auto-approve  

@@ -1,0 +1,3 @@
+module "pipelineprojectvpc" {
+    source = "../Modules"
+}
